@@ -23,6 +23,7 @@ def begin_end(request):
         print("invalid browser name")
     webdriver_obj.get("http://automationpractice.com")
     webdriver_obj.maximize_window()
+    webdriver_obj.implicitly_wait(5)
     mouse_hover = ActionChains(webdriver_obj)
     request.cls.webdriver_obj = webdriver_obj
     request.cls.mouse_hover = mouse_hover
