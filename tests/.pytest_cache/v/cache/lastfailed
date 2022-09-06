@@ -1,7 +1,1 @@
-{
-  "test_cases.py::TestShopping::test_f2208_ap_add_to_cart": true,
-  "test_cases.py::TestShopping::test_f2208_ap_url_title": true,
-  "test_cases.py::TestShopping::test_f2208_ap_dressed_menu": true,
-  "test_cases.py::TestShopping::test_f2208_ap_product_display": true,
-  "test_cases.py::TestShopping::test_f2208_ap_product_description_display": true
-}
+{}

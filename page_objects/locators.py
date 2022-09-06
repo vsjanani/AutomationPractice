@@ -8,7 +8,7 @@ class HomePageLocators:
 
 
 class SummerDressPageLocators:
-    PrintedChiffonDress = (By.LINK_TEXT, "Printed Chiffon Dress")
+    PrintedChiffonDress = (By.XPATH, '//ul[contains(@class, "product_list")] //a[@title = "Printed Chiffon Dress"]')
     MoreInPrintedChiffonDress = (By.XPATH, '//a[@title="Printed Chiffon Dress"]/parent::h5/following-sibling::div[2]/a[2]')
 
 
@@ -17,5 +17,15 @@ class AddToCartPageLocators:
 
 
 class ProceedToCheckoutLocators:
-    AddToCartSuccess = (By.XPATH, "//h2[contains(text(), 'Product successfully added')]")
+    AddToCartSuccess = (By.XPATH, "//div[@id='layer_cart']/div/div/h2")
     ProceedToCheckout = (By.CSS_SELECTOR, "[title = 'Proceed to checkout']")
+
+
+class ShoppingCartSummaryLocators:
+    TotalProduct = (By.ID, "total_product")
+    TotalWrapping = (By.ID, "total_wrapping")
+    TotalShipping = (By.ID, "total_shipping")
+    TotalDiscount = (By.ID, "total_discount")
+    TotalPriceWithoutTax = (By.ID, "total_price_without_tax")
+    TotalTax = (By.ID, "total_tax")
+    TotalPrice = (By.ID, "total_price_container")
