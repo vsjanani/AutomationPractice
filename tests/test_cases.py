@@ -47,14 +47,15 @@ class TestShopping(Utilities):
         summarypage_obj = proceedtocheckoutpage_obj.click_proceed_to_checkout()
         summarypage_obj.expected_total_price_equal_to_actual_total_price()
 
-    def test_f2208_ap_SignInPage(self):
+    def test_f2208_ap_sign_in_page(self):
         summarypage_obj.ProceedToCheckout.click()
         assert self.webdriver_obj.title == Expected.sign_in_title
 
-    def test_f2208_ap_invalid_login(self, login_details):
+    def test_f2208_ap_invalid_login(self, login_values):
         sign_in_obj = SignInPage(self.webdriver_obj)
-        sign_in_obj.email.send_keys(login_details["email"])
-        sign_in_obj.password.send_keys(login_details["password"])
-        sign_in_obj.signinbutton.click()
+        sign_in_obj.click_email_field().send_keys(login_values["email"])
+        sign_in_obj.click_password_field().send_keys(login_values["password"])
+        auth_error_obj = sign_in_obj.click_sign_in()
+        assert auth_error_obj.AuthError.text == Expected.authentication_error
 
 

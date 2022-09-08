@@ -36,4 +36,5 @@ class SignInPageLocators:
     Email = (By.ID, "email")
     Password = (By.ID, "passwd")
     SignInButton = (By.ID, "SubmitLogin")
+    AuthError = (By.XPATH, '//li[contains(text(), "Authentication failed")]')
 

@@ -5,8 +5,11 @@
   "test_cases.py::TestShopping::test_f2208_ap_invalid_login",
   "test_cases.py::TestShopping::test_f2208_ap_invalid_login[login_details0]",
   "test_cases.py::TestShopping::test_f2208_ap_invalid_login[login_details1]",
+  "test_cases.py::TestShopping::test_f2208_ap_invalid_login[login_values0]",
+  "test_cases.py::TestShopping::test_f2208_ap_invalid_login[login_values1]",
   "test_cases.py::TestShopping::test_f2208_ap_product_description_display",
   "test_cases.py::TestShopping::test_f2208_ap_product_display",
   "test_cases.py::TestShopping::test_f2208_ap_shopping_cart_summary",
+  "test_cases.py::TestShopping::test_f2208_ap_sign_in_page",
   "test_cases.py::TestShopping::test_f2208_ap_url_title"
 ]
