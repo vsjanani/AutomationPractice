@@ -23,11 +23,17 @@ def begin_end(request):
     else:
         print("invalid browser name")
     webdriver_obj.get("http://automationpractice.com")
+    # webdriver_obj.get("https://www.ulamart.com")
     webdriver_obj.maximize_window()
     webdriver_obj.implicitly_wait(15)
     mouse_hover = ActionChains(webdriver_obj)
     request.cls.webdriver_obj = webdriver_obj
     request.cls.mouse_hover = mouse_hover
+
+@pytest.fixture(params=[{"email": "jananikrishna@gmail.com", "password" : "krishna@01"}, {"email": "jananidinesh@gmail.com", "password": "krishna@02"}])
+def login_details(request):
+    return request.param
+
 
 
 

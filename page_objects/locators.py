@@ -29,3 +29,11 @@ class ShoppingCartSummaryLocators:
     TotalPriceWithoutTax = (By.ID, "total_price_without_tax")
     TotalTax = (By.ID, "total_tax")
     TotalPrice = (By.ID, "total_price_container")
+    ProceedToCheckout = (By.XPATH, "//div[@id = 'center_column']/p[2]/a[1]")
+
+
+class SignInPageLocators:
+    Email = (By.ID, "email")
+    Password = (By.ID, "passwd")
+    SignInButton = (By.ID, "SubmitLogin")
+

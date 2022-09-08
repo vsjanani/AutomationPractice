@@ -1,4 +1,4 @@
 # Created by pytest automatically.
 check.py
 venv/
-basic python.py
+test_basic python.py

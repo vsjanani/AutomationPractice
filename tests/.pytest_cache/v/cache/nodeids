@@ -1,6 +1,10 @@
 [
+  "test_cases.py::TestShopping::test_f2208_ap_SignInPage",
   "test_cases.py::TestShopping::test_f2208_ap_add_to_cart",
   "test_cases.py::TestShopping::test_f2208_ap_dressed_menu",
+  "test_cases.py::TestShopping::test_f2208_ap_invalid_login",
+  "test_cases.py::TestShopping::test_f2208_ap_invalid_login[login_details0]",
+  "test_cases.py::TestShopping::test_f2208_ap_invalid_login[login_details1]",
   "test_cases.py::TestShopping::test_f2208_ap_product_description_display",
   "test_cases.py::TestShopping::test_f2208_ap_product_display",
   "test_cases.py::TestShopping::test_f2208_ap_shopping_cart_summary",

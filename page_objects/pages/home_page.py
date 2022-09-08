@@ -14,8 +14,13 @@ class HomePage:
         self.DressesList = self.webdriver_obj.find_elements(*HomePageLocators.DressesList)
         self.SummerDress = self.webdriver_obj.find_element(*HomePageLocators.SummerDress)
 
+    def click_summer_dress(self):
+        self.SummerDress.click()
+        summerdresspage_obj = SummerDressPage(self.webdriver_obj)
+        return summerdresspage_obj
 
-class SummerDress:
+
+class SummerDressPage:
     def __init__(self, webdriver_obj):
         self.webdriver_obj = webdriver_obj
         self.PrintedChiffonDress = self.webdriver_obj.find_element(*SummerDressPageLocators.PrintedChiffonDress)
@@ -35,11 +40,11 @@ class AddToCart:
     def click_add_to_cart(self):
         self.AddToCart.click()
         time.sleep(5)
-        proceed_to_checkout_obj = ProceedToCheckout(self.webdriver_obj)
-        return proceed_to_checkout_obj
+        proceedtocheckoutpage_obj = ProceedToCheckoutPage(self.webdriver_obj)
+        return proceedtocheckoutpage_obj
 
 
-class ProceedToCheckout:
+class ProceedToCheckoutPage:
     def __init__(self, webdriver_obj):
         self.webdriver_obj = webdriver_obj
         self.AddToCartSuccess = self.webdriver_obj.find_element(*ProceedToCheckoutLocators.AddToCartSuccess)
@@ -47,7 +52,7 @@ class ProceedToCheckout:
 
     def click_proceed_to_checkout(self):
         self.ProceedToCheckout.click()
-        summary_obj = ShoppingCartSummaryPage(self.webdriver_obj)
-        return summary_obj
+        summarypage_obj = ShoppingCartSummaryPage(self.webdriver_obj)
+        return summarypage_obj
 
 

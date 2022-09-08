@@ -12,6 +12,7 @@ class ShoppingCartSummaryPage:
         self.actual_total_pricewithouttax = self.webdriver_obj.find_element(*ShoppingCartSummaryLocators.TotalPriceWithoutTax)
         self.total_tax = self.webdriver_obj.find_element(*ShoppingCartSummaryLocators.TotalTax)
         self.total_price = self.webdriver_obj.find_element(*ShoppingCartSummaryLocators.TotalPrice)
+        self.ProceedToCheckout = self.webdriver_obj.find_element(*ShoppingCartSummaryLocators.ProceedToCheckout)
 
     def expected_total_price_equal_to_actual_total_price(self):
         expected_total_pricewithouttax = 0.00
