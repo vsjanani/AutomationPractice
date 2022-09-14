@@ -1,7 +1,7 @@
 import inspect
 import logging
 import pytest
-from behave.formatter import null
+# from behave.formatter import null
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 explicit_wait = None
