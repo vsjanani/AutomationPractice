@@ -9,12 +9,16 @@ add_to_cart_obj = None
 proceedtocheckoutpage_obj = None
 summerdresspage_obj = None
 summarypage_obj = None
+log = None
 
 
 class TestShopping(Utilities):
     # @pytest.mark.skip
     def test_f2208_ap_url_title(self):
+        global log
         assert self.webdriver_obj.title == Expected.website_url
+        log = self.logging()
+        log.info("validating if info is printed")
 
     def test_f2208_ap_dressed_menu(self):
         global homepage_obj
@@ -24,23 +28,27 @@ class TestShopping(Utilities):
         for each_dress_option in homepage_obj.DressesList:
             actual_dresses_list.append(each_dress_option.text)
         assert actual_dresses_list == Expected.dresses_list
+        log.debug("validating if debug is printed")
 
     def test_f2208_ap_product_display(self):
         global summerdresspage_obj
         summerdresspage_obj = homepage_obj.click_summer_dress()
         assert self.element_visible(SummerDressPageLocators.PrintedChiffonDress)
+        log.error("validating if error is printed")
 
     def test_f2208_ap_product_description_display(self):
         global add_to_cart_obj
         self.mouse_hover_to(summerdresspage_obj.PrintedChiffonDress)
         add_to_cart_obj = summerdresspage_obj.click_more_in_printedchiffondress()
         assert self.webdriver_obj.title == Expected.product_title
+        log.critical("validating if critical is printed")
 
     def test_f2208_ap_add_to_cart(self):
         global proceedtocheckoutpage_obj
         proceedtocheckoutpage_obj = add_to_cart_obj.click_add_to_cart()
         time.sleep(5)
         assert(proceedtocheckoutpage_obj.AddToCartSuccess.text == Expected.add_to_cart_success)
+        log.warning("validating if warning is printed")
 
     def test_f2208_ap_shopping_cart_summary(self):
         global summarypage_obj
@@ -57,5 +65,6 @@ class TestShopping(Utilities):
         sign_in_obj.click_password_field().send_keys(login_values["password"])
         auth_error_obj = sign_in_obj.click_sign_in()
         assert auth_error_obj.AuthError.text == Expected.authentication_error
+
 
 

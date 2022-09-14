@@ -1,3 +1,5 @@
+import inspect
+import logging
 import pytest
 from behave.formatter import null
 from selenium.webdriver.support import expected_conditions
@@ -25,3 +27,13 @@ class Utilities:
 
     def mouse_hover_to(self, locator):
         return self.mouse_hover.move_to_element(locator).perform()
+
+    def logging(self):
+        logObj = logging.getLogger(inspect.stack()[1][3])
+        fileHandlerObj = logging.FileHandler("logfile.log")
+        formatterObj = logging.Formatter("%(asctime)s, %(levelname)s, %(name)s, %(message)s")
+        logObj.addHandler(fileHandlerObj)
+        fileHandlerObj.setFormatter(formatterObj)
+        logObj.setLevel(logging.DEBUG)
+        return logObj
+
