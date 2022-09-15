@@ -432,6 +432,15 @@ this can be called as below:
 
     def test_cross_browsers(self, test_browsers):
         print(test_browsers)
+
+To read values from dictionary,
+
+@pytest.fixture(params=([{"email": "jansre90@gmail.com", "password": "123"}, {"email": "gdinesh@gmail.com", "password": "456"}]))
+def test_browsers(request):
+    return request.param
+
+Note: dictionary should be enclosed by a list(or array) braces [] followed by tuple braces.
+
         
 --to generate html report:
 
