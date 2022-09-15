@@ -660,6 +660,84 @@ https://github.com/vsjanani/AutomationPractice.git
 My first selenium python project
 
 
+*****************************************************************************************************
+
+jenkins:
+janani
+Kels3road
+
+Git:
+vsjanani
+Sanjeevkrish@01
+file:///C:/Program%20Files/Git/ReleaseNotes.html
+download git exe.
+create github acct.
+use steps in learning python notepad for git commands.
+
+selenium python step by step procedure:
+
+install python
+add python and pip to system environment variables
+to verify, use, "python --version" in command prompt
+pip install selenium
+to verify, pip show selenium.
+install pycharm editor
+pip install pytest
+to verify, use, pytest -version. Note: ensure latest pip version to be upgraded to avoid "pytest is not an external or internal command"
+pip install pytest-html
+pip install openpyxl
+install git from git downloads, create github acct.
+
+
+C:/Users/dines/OneDrive/Documents/MyPythonProject/chromedriver.exe
+
+Go to jenkins path: (also check if it is added in env variables)
+ C:\Program Files\Jenkins
+java -jar jenkins.war
+type localhost:8080 in browser and login jenkins
+
+custom workspace in jenkins configuration:  C:\Users\dines\OneDrive\Documents\MyPythonProject
+
+In Build section:
+cd PycharmProjects\PycharmProjects\pythonProject2\E2E_Framework
+pytest --browser_name "%browsername%" --html=$WORKSPACE\PycharmProjects\PycharmProjects\pythonProject2\reports\report.html-v --junitxml="result.xml"
+
+jenkins css update:
+Manage Jenkins->
+Manage Nodes->
+Click settings(gear icon)->
+click Script console on left and type in the following command:
+
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
+
+via github:
+Home: C:\Users\dines\AppData\Local\Programs\Python\Python310\python.exe
+
+Under command:
+python -m venv env
+call ./env/Scripts/activate.bat
+pip install -r requirements.txt
+pip install seleniumbase
+sbase install chromedriver latest
+pytest --browser_name "%browsername%" --html=report.html
+for more infor: https://www.youtube.com/watch?v=h2Abne2jIjM
+
+
+Post Build Action section:
+PycharmProjects\PycharmProjects\pythonProject2\E2E_Framework\*.xml
+
+To create venv folder:
+cd D:\AutomationPractice  #go to project directory
+python -m venv D:\AutomationPractice\venv
+cd venv
+cd Scripts
+activate
+
+
+To get out of venv mode, type deactivate
+
+
+
 
 
 
